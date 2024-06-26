@@ -1,0 +1,76 @@
+<div class="container">
+  <h1 class="mb-3 fw-bold">Thông Tin Người Mua</h1>
+  <div class="bg-light rounded border overflow-hidden p-3">
+    <form>
+      <div class="mb-3">
+        <label for="hoTen" class="form-label">Họ tên</label>
+        <input type="text" class="form-control" id="hoTen" placeholder="Nhập họ tên">
+      </div>
+      <div class="mb-3">
+        <label for="sdt" class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" id="sdt" placeholder="Nhập số điện thoại" >
+      </div>
+      <div class="mb-3">
+        <label for="diaChi" class="form-label">Địa chỉ</label>
+        <textarea class="form-control" id="diaChi" rows="3" placeholder="Nhập địa chỉ"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="nguoiNhan" class="form-label">Người nhận</label>
+        <input type="text" class="form-control" id="nguoiNhan" placeholder="Nhập tên người nhận">
+      </div>
+    </form>
+  </div>
+  <h1 class="mb-3 mt-3 fw-bold">Sản Phẩm</h1>
+  <div class="rounded border overflow-hidden p-4 bg-light">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Ảnh</th>
+          <th>Tên</th>
+          <th>Số lượng</th>
+          <th>Giá</th>
+          <th>Thành tiền</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in giohang">
+          <th>{{item.id}}</th>
+          <th>
+            <div class="overflow-hidden" style="height: 150px;">
+              <img src="{{item.anh}}" alt="" class="mw-100 mh-100">
+            </div>
+          </th>
+          <th>{{item.ten}}</th>
+          <th>{{item.soluong}}</th>
+          <th>{{item.giaBan}} VNĐ</th>
+          <th>{{item.thanhtien}} VNĐ</th>
+          <td>
+            <button class="btn btn-danger btn-sm" ng-click="oneclickdelete(item.id)">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td colspan="3" class="text-end"><strong>Tổng cộng:</strong></td>
+          <td class="fw-bold">{{tongtien}} VNĐ</td>
+
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td colspan="5" class="text-end">
+            <button class="btn btn-success" ng-click="oneclickdathang()">Đặt Hàng</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class=" alert alert-warning" ng-hide="formStatus" style="height: 80px;">
+      {{thongbao}}
+  </div>
+  </div>
+</div>

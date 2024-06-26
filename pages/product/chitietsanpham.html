@@ -1,0 +1,191 @@
+<main style="margin-top: 85px;">
+  <div class="container">
+    <div class="row bg-light rounded border overflow-hidden mt-3 mb-3" >
+      <div class="col-6 mt-3 mb-3">
+        <div style="width: 600px;">       
+          <img src="{{sanpham.anh}}" alt="" class="rounded-5 mh-100 w-100">
+        </div>
+      </div>
+      <div class="col-6 mt-3">
+        <h3 >{{sanpham.ten}}</h3>
+        <div class="d-flex justify-content-start">
+          <h5 class="">Tình Trạng :</h5>
+          <h5 class="fw-bold text-danger ms-3">Còn Hàng </h5>
+        </div>
+        <div class="bg-light rounded border">
+          <div class="d-flex justify-content-start m-3 ">
+            <h4 class="text-decoration-line-through ">
+              {{sanpham.giaNiemYet}}
+            </h4>
+            <h4 class="fw-bold text-danger ms-4">
+              {{sanpham.giaBan}} VNĐ
+            </h4>
+          </div>
+        </div>
+        <h6 class="mt-3 mb-3">Kích thước</h6>
+        <div class="btn-group" role="group" aria-label="Kích thước">
+          <input type="radio" class="btn-check" name="size" id="size-small" autocomplete="off">
+          <label class="btn btn-outline-primary" for="size-small">S</label>
+
+          <input type="radio" class="btn-check" name="size" id="size-medium" autocomplete="off">
+          <label class="btn btn-outline-primary" for="size-medium">M</label>
+
+          <input type="radio" class="btn-check" name="size" id="size-large" autocomplete="off">
+          <label class="btn btn-outline-primary" for="size-large">L</label>
+
+          <input type="radio" class="btn-check" name="size" id="size-Extra Large" autocomplete="off">
+          <label class="btn btn-outline-primary" for="size-Extra Large">XL</label>
+
+          <input type="radio" class="btn-check" name="size" id="size-Extra Extrar Large" autocomplete="off">
+          <label class="btn btn-outline-primary" for="size-Extra Extrar Large">XXL</label>
+        </div>
+        <h6 class="mt-3 mb-3">Mua Theo</h6>
+        <div class="btn-group" role="group" aria-label="fon">
+          <input type="radio" class="btn-check" name="fon" id="ao" autocomplete="off">
+          <label class="btn btn-outline-danger" for="ao">Áo</label>
+
+          <input type="radio" class="btn-check" name="fon" id="cabo" autocomplete="off">
+          <label class="btn btn-outline-danger" for="cabo">Cả Bộ</label>
+        </div>
+        <h6 class="mt-3 mb-3">Số Lượng</h6>
+        <div class="input-group mt-3 mb-3" style="width: 200px;">
+          <span class="input-group-text">Số lượng:</span>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="decrease-btn" ng-click="oneclickgiam()">-</button>
+          </div>
+          <input type="text" class="form-control" value="{{cartNumber}}" aria-label="Số lượng" readonly>
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button" id="increase-btn" ng-click="oneclicktang()">+</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-start mt-5 ms-5">
+          <div class="">
+            <button class="bg-danger text-light rounded-4 me-5 border-info-subtle"
+              style="width: 250px; height: 70px;" ng-click="oneclickthemgiohang()"><i class="bi bi-cart-plus fs-3 me-3"></i>Thêm Vào Giỏ Hàng</button>
+          </div>
+          <div class="">
+            <a class="btn btn-info text-light rounded-4 border-warning-subtle" style="width: 250px; height: 70px;" href="#!thanhtoan-product"><i
+                class="bi bi-bag fs-3 me-3"></i>Mua Ngay</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="content">
+        <p>ÁO ĐẤU MANCHESTER UNITED SÂN NHÀ BẢN PLAYER - LOGO ÉP MÙA GIẢI 2023/2024 <br>
+          Xuất xứ: Thái Lan <br>
+          MÔ TẢ <br>
+          Chất liệu: Polyester, công nghệ Climate thấm hút tốt <br>
+          Kiểu dáng: Form ôm, tay ngắn, <br>
+          Màu sắc: Đỏ sọc đen <br>
+          Logo: Ép nổi<br>
+        </p>
+        <div class="collapse" id="collapseContent">
+          <p>Size: Có đủ size từ S-XXL (50-90kg) <br>
+            In tên số, logo theo yêu cầu <br>
+
+            Vải Thailand thuộc dòng vải cao cấp, xưa nay vốn nổi tiếng về độ thoáng mát. Tích hợp tất cả những ưu điểm
+            của hai loại vải trên, vải Thailand đem lại cảm giác hoàn toàn mới khi sử dụng<br>
+
+            Một chiếc áo bóng đá bằng vải Thailand vô cùng nhẹ và dễ chịu<br>
+            Khả năng chống nhăn, kháng bụi và ẩm mốc tốt hơn cả các loại vải khác<br>
+            Tính thẩm mỹ của loại vải này khiến nó được ưu ái trong sản xuất áo thể thao. Các sợi vải của áo giữ màu rất
+            tốt cho màu sắc của áo luôn tươi mới<br>
+            Khả năng hút ẩm và bay hơi của áo rất tốt, chiếc áo luôn khô ráo bất chấp thời tiết nắng nóng hay mưa ẩm<br>
+            Khả năng cách nhiệt và thoáng khí<br>
+            Bề mặt áo mềm và xốp, thường có các lỗ nhỏ li ti giúp thoáng khí</p>
+          <div class="d-flex justify-content-center"><img
+              src="/img/ao/mu/size_bodyfit___ao_co_tron_ac70bb07d9e948f59955b5b80082876d_grande.webp" alt=""></div>
+          <h1>Nhà Cái Đến Từ Châu Phi -- > <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              class="text-decoration-none">ấn vào</a></h1>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-outline-primary border-light shadow" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseContent" aria-expanded="false" aria-controls="collapseContent"
+            id="toggleButton">Xem thêm <br>V</br></button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h3 class="d-flex justify-content-center mb-5 mt-5 fw-bold">Bạn Thể Có Thể Thích</h3>
+    <div class="row">
+      <div class="col-3">
+        <div class="rounded border overflow-hidden mb-3">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 457px;">
+            <img src="/img/ao/Ao_DJau_San_Nha_Authentic_FC_Bayern_23-24_trang_HR3729_HM1.avif" alt="" class="mh-100">
+          </div>
+          <div class="m-2">
+            <div style="height: 80px;">
+              <h5>ÁO ĐẤU SÂN NHÀ AUTHENTIC FC BAYERN 23/24</h5>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+              <span class="fw-bold">3.000.000đ</span>
+              <span class="fw-bold text-decoration-line-through">3.800.000đ</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="rounded border overflow-hidden mb-3">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 457px">
+            <img src="/img/ao/Ao_DJau_San_Khach_Manchester_United_23-24_mau_xanh_la_HR3675_HM1.avif" class="mh-100">
+          </div>
+          <div class="m-2">
+            <div style="height: 80px;">
+              <h5>ÁO ĐẤU SÂN KHÁCH MANCHESTER UNITED 23/24</h5>
+            </div>
+            <!-- Khu vực tên sản phẩm -->
+            
+
+            <!-- Khu vực giá sản phẩm -->
+            <div class="d-flex justify-content-between">
+              <span class="fw-bold">1.300.000đ</span>
+              <span class="fw-bold text-decoration-line-through">1.900.000đ</span>
+            </div>
+
+            <!-- Khu vực button -->
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="rounded border overflow-hidden mb-3">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 457px;">
+            <img src="/img/ao/AO_DJAU_MANCHESTER_UNITED_23-24_LFSTLR_trang_IP1746_HM1.avif" alt="" class="mh-100">
+          </div>
+          <div class="m-2">
+            <div style="height: 80px;">
+              <h5>ÁO ĐẤU MANCHESTER UNITED 23/24 LFSTLR</h5>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+              <span class="fw-bold">2.300.000đ</span>
+              <span class="fw-bold text-decoration-line-through">3.000.000đ</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="rounded border overflow-hidden mb-3">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 457px;">
+            <img src="/img/ao/Ao_DJau_San_Nha_Authentic_Real_Madrid_23-24_trang_IA5139_HM1.avif" alt="" class="mh-100">
+          </div>
+          <div class="m-2">
+            <div style="height: 80px;">
+              <h5>ÁO ĐẤU SÂN NHÀ AUTHENTIC REAL MADRID 23/24</h5>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+              <span class="fw-bold">3.300.000đ</span>
+              <span class="fw-bold text-decoration-line-through">4.200.000đ</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

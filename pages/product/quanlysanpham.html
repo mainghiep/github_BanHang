@@ -1,0 +1,69 @@
+<body>
+    <div class="container">
+        <h1 class="fw-bold">Quản lý sản phẩm</h1>
+        <div class="">
+            <a href="#!themsanpham-product" class="btn btn-primary mb-3">Thêm</a>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Giá Bán</th>
+                        <th scope="col">Giá Bán Niêm Yết</th>
+                        <th scope="col">Tên Danh Mục</th>
+                        <th scope="col">ID Danh Mục</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr ng-repeat="item in listsanpham" style="height: 100px;">
+                        <th>{{item.id}}</th>
+                        <th>{{item.ten}}</th>
+                        <th>{{item.giaBan}} VNĐ</th>
+                        <th>{{item.giaNiemYet}}</th>
+                        <th>{{item.tenDanhMuc}}</th>
+                        <th>{{item.idDanhMuc}}</th>
+                        <th class="text-nowrap" style="width: 1px;">
+                            <div>
+                                <a href="#!chitietsanpham-product/{{item.id}}" class="btn btn-warning btn-sm">Chi
+                                    tiết</a>
+                                    <a href="#!chinhsuasanpham-product/{{item.id}}" class="btn btn-success btn-sm">Sửa</a>
+                                <button type="button" class="btn btn-danger btn-sm" ng-click="onedelete(item.id)">
+                                    Xóa
+                                </button>
+                            </div>
+                        </th>
+                        <!-- Modal Xóa -->
+                        <div class="modal" id="myModal-{{item.id}}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Xác nhận xóa</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        Bạn có chắc chắn muốn xóa <strong>{{item.ten}}</strong>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Hủy</button>
+                                        <button ng-click="onedelete(item.id)" class="btn btn-danger">Xác nhận
+                                            xóa</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+
+</body>

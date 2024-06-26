@@ -1,0 +1,29 @@
+<main class="" style="margin-top: 100px; margin-bottom: 150px;">
+    <div class="container">
+        <div class="border rounded bg-light overflow-hidden">
+            <form class="mx-auto mb-5 mt-5" style="width: 650px;">
+                <h3 class="d-flex justify-content-center">Đăng Nhập</h3 >
+                <div class="mb-3 mt-3" id="dangnhap">
+                    <label  class="form-label">Tài Khoản:</label >
+                    <input  class="form-control" ng-model="users.taikhoan">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mật Khẩu:</label>
+                    <input type="password" class="form-control" ng-model="users.matkhau">
+                </div>
+                <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input"> Nhớ Mật Khẩu
+                    </label>
+                </div>
+                <div class="">
+                <a class="btn btn-danger" style="margin-right: 10px;" ng-click="oneclickthem()">Đăng Nhập</a>
+                <button class="btn btn-primary"><a href="#!dangky-product" class="text-decoration-none text-light">Tạo Tài Khoản</a></button>
+                </div>
+                <div class=" alert alert-warning mt-3" ng-hide="checkloi" style="height: 80px;">
+                    {{thongbao}}
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

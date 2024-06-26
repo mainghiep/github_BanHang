@@ -1,0 +1,58 @@
+<div class="mb-5 d-flex justify-content-center" style="margin-top: 100px;">
+    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-search"></i>
+        Danh Mục</button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-3" ng-repeat="item in sanpham">
+            <div class="rounded border overflow-hidden mb-3">
+                <div class="bg-light d-flex justify-content-center align-items-center" style="height: 370px">
+                    <img src="{{item.anh}}" class="mh-100">
+                </div>
+                <div class="m-2">
+                    <!-- Khu vực tên sản phẩm -->
+                    <div style="height: 70px;">
+                        <h5>{{item.ten}}</h5>
+                    </div>
+
+
+                    <!-- Khu vực giá sản phẩm -->
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-bold">{{item.giaBan}} VNĐ</span>
+                        <span class="text-secondary text-decoration-line-through">{{item.giaNiemYet}}</span>
+                    </div>
+
+                    <!-- Khu vực button -->
+
+                    <a href="#!chitietsanpham-product/{{item.id}}" class="btn btn-danger rounded-pill w-100 btn-sm">Tìm Hiểu Thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Danh Mục</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="">
+                        <div class="" >
+                            <a href="" class="btn btn-primary w-100 mb-3" ng-click="oneclickMU(item.null)">Tất Cả</a>
+                            <div class="accordion" id="sidebar" ng-repeat="item in danhmuc">
+                                <button class="btn btn-primary w-100 mb-3" ng-click="oneclickMU(item.id)">
+                                    {{item.ten}}</button>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

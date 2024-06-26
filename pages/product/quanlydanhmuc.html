@@ -1,0 +1,25 @@
+<body>
+  <div class="container">
+    <h1 class="fw-bold">Quản lý danh mục sản phẩm</h1>
+    <a href="#!themdanhmuc-product"class="btn btn-primary mb-3">Thêm</a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Tên danh mục</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in listdanhmuc">
+          <td>{{item.id}}</td>
+          <td>{{item.ten}}</td>
+          <td>
+            <a href="#!suadanhmuc-product/{{item.id}}" class="btn btn-primary btn-sm" >Sửa</a>
+            <button class="btn btn-danger btn-sm" ng-click="oneclickxoa(item.id)">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

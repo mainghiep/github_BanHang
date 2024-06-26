@@ -1,0 +1,97 @@
+
+<body>
+  <main
+    style="background-image: url(/img/pexels-miguel-á-padriñán-255379.jpg); background-repeat: no-repeat; background-size: cover">
+    <div class="" style="min-height: calc(100vh - 125px) ;">
+      <div class="bg-dark d-flex align-items-center justify-content-center">
+        <img src="/img/slide1-1.gif" alt="" class="mh-100 mw-100">
+      </div>
+      <a href="#!sanpham-product" class="btn btn-outline-success"
+        style="position: relative; bottom: 200px; left: 290px;">Tìm Hiểu
+        Thêm</a>
+    </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" style="position: relative; bottom: 38px;">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/banner_01.jpg" alt="Los Angeles" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/1920x450-boomday3_5d793eb522ea4ea285c9cb4881fd5cd1.webp" alt="Chicago" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/1920x450-mua1tang3_94f508d4a4604168bd62b7a4acd105f6.webp" alt="New York"
+            class="d-block w-100">
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="container">
+      <h3 class="mb-5">Danh Sách Sản Phẩm Mới <span class="badge bg-warning">NEW</span></h3>
+
+
+      <div class="row">
+        <div class="col-3" ng-repeat="item in danhsachnew">
+          <div class="rounded border overflow-hidden mb-3">
+            <div class="bg-light d-flex justify-content-center align-items-center" style="height: 370px">
+              <img src="{{item.anh}}" class="mh-100">
+            </div>
+            <div class="m-2">
+              <!-- Khu vực tên sản phẩm -->
+              <div style="height: 70px;">
+                <h5>{{item.ten}}</h5>
+              </div>
+
+
+              <!-- Khu vực giá sản phẩm -->
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold">{{item.giaBan}} VNĐ</span>
+                <span class="text-secondary text-decoration-line-through">{{item.giaNiemYet}}</span>
+              </div>
+
+              <!-- Khu vực button -->
+
+              <a href="#!chitietsanpham-product/{{item.id}}" class="btn btn-danger rounded-pill w-100 btn-sm">Tìm Hiểu Thêm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3 class="mb-5 mt-5">Danh Sách Sản Phẩm HOT <span class="badge bg-danger">WHAT'S HOT</span></h3>
+        <div class="col-3" ng-repeat="item in danhsachhot">
+          <div class="rounded border overflow-hidden mb-3">
+            <div class=" d-flex justify-content-center align-items-center" style="height: 457px;">
+              <img src="{{item.anh}}" alt="" class="mh-100 mw-100">
+            </div>
+            <div class="m-2">
+              <div style="height: 70px;">
+                <h5>{{item.ten}}</h5>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold">{{item.giaBan}}</span>
+                <span class="text-secondary text-decoration-line-through">{{item.giaNiemYet}}</span>
+              </div>
+              <a href="#!chitietsanpham-product/{{item.id}}" class="btn btn-danger rounded-pill w-100 btn-sm">Tìm Hiểu Thêm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>

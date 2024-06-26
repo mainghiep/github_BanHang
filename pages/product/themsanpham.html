@@ -1,0 +1,49 @@
+<h3>Tạo Mới Sản Phẩm</h3>
+<!-- khu vực id -->
+<div class="mt-3">
+    <span class="form-label">ID :</span>
+    <input type="text" class="form-control" ng-model="sanpham.id">
+</div>
+<!-- khu vực name -->
+<div class="mt-3">
+    <span class="form-label">Tên :</span>
+    <input type="text" class="form-control" ng-model="sanpham.ten">
+</div>
+<!-- khu vực price -->
+<div class="mt-3">
+    <span class="form-label">Giá Bán :</span>
+    <input type="text" class="form-control" ng-model="sanpham.giaBan">
+</div>
+<div class="mt-3">
+    <span class="form-label">giá Niêm Yết :</span>
+    <input type="text" class="form-control" ng-model="sanpham.giaNiemYet">
+</div>
+<div class="mt-3">
+    <span class="form-label">Ảnh :</span>
+    <input type="text" class="form-control" ng-model="sanpham.anh">
+</div>
+<!-- khu vực category -->
+<div class="mt-3">
+    <span class="form-label">Danh Mục :</span>
+    <select class="form-control" ng-model="sanpham.tenDanhMuc">
+        <option value=""> Lựa chọn</option>
+        <option value="Áo MU">manchester united</option>
+        <option value="Áo AS">Arsenal</option>
+        <option value="Áo RA">real madrid</option>
+    </select>
+</div>
+<div class="mt-3">
+    <span class="form-label">ID Danh Mục :</span>
+    <select class="form-control" ng-model="sanpham.idDanhMuc">
+        <option value=""> Lựa chọn</option>
+        <option value="DM01">DM01</option>
+        <option value="DM02">DM02</option>
+        <option value="DM03">DM03</option>
+    </select>
+</div>
+<!-- khu vực button tạo mới -->
+<a href="" class="mt-3 mb-3 btn btn-danger" ng-click="oneclickthem()">Tạo Mới</a>
+<!-- báo lloix -->
+<div class=" alert alert-warning" ng-hide="formStatus" style="height: 80px;">
+    {{thongbao}}
+</div>
